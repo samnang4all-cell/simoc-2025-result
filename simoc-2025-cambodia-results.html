@@ -1,0 +1,1090 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIMOC 2025 — Cambodia Results</title>
+<meta name="description" content="Search and browse the SIMOC 2025 results for 160 Cambodian competitors across Math Olympiad, Math Warriors, and Math Mind Master.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SIMOC 2025 — Cambodia Results
+   The Brainiac Factory · navy + gold prestige palette
+   ============================================================ */
+:root {
+  color-scheme: light;
+
+  /* Brand */
+  --navy:        #0D1B4B;
+  --navy-deep:   #081232;
+  --navy-soft:   #1b2c63;
+  --gold:        #C9A84C;
+  --gold-bright: #E0BE5C;
+  --gold-soft:   #f4ead0;
+
+  /* Medals */
+  --silver:      #BFC4CC;
+  --bronze:      #C08A4A;
+  --hm:          #6b7385;
+
+  /* Neutrals */
+  --ink:         #16203a;
+  --muted:       #6b7385;
+  --line:        #e3e7f1;
+  --line-soft:   #eef1f7;
+  --paper:       #f5f6fb;
+  --panel:       #ffffff;
+  --focus:       #3a6df0;
+
+  --shadow-sm: 0 1px 2px rgba(13,27,75,.06), 0 2px 8px rgba(13,27,75,.05);
+  --shadow-md: 0 10px 30px rgba(13,27,75,.12);
+  --shadow-lg: 0 30px 70px rgba(8,18,50,.45);
+
+  --display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  font-family: var(--sans);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+}
+button, input, select { font: inherit; color: inherit; }
+
+/* ============================================================
+   MASTHEAD
+   ============================================================ */
+.masthead {
+  position: relative;
+  padding: clamp(28px, 5vw, 56px) clamp(18px, 5vw, 56px) clamp(28px, 4vw, 44px);
+  background:
+    radial-gradient(1200px 400px at 85% -40%, rgba(201,168,76,.28), transparent 60%),
+    linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: #fff;
+  overflow: hidden;
+}
+.masthead::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold) 25%, var(--gold-bright) 50%, var(--gold) 75%, transparent);
+}
+.masthead-inner {
+  max-width: 1320px; margin: 0 auto;
+  display: flex; flex-direction: column; gap: 28px;
+}
+.masthead-top {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 32px; flex-wrap: wrap;
+}
+.eyebrow {
+  margin: 0 0 12px;
+  display: inline-flex; align-items: center; gap: 9px;
+  color: var(--gold-bright);
+  font-size: .74rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+}
+.eyebrow::before {
+  content: ""; width: 28px; height: 1px; background: var(--gold);
+}
+.masthead h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: -.01em;
+}
+.masthead h1 em {
+  font-style: italic;
+  color: var(--gold-bright);
+  font-weight: 700;
+}
+.lede {
+  margin: 16px 0 0;
+  max-width: 640px;
+  color: rgba(255,255,255,.78);
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+/* Stat tiles */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  max-width: 720px;
+  width: 100%;
+}
+.stat {
+  padding: 16px 18px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 12px;
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(6px);
+}
+.stat-num {
+  font-family: var(--display);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+.stat-label {
+  margin-top: 6px;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.6);
+  font-weight: 500;
+}
+
+@media (max-width: 720px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============================================================
+   CONTROLS BAR
+   ============================================================ */
+.controls {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: saturate(150%) blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: 18px clamp(14px, 4vw, 40px);
+}
+.controls-inner {
+  max-width: 1320px; margin: 0 auto;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.row1 {
+  display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+}
+.search {
+  flex: 1; min-width: 240px;
+  position: relative;
+}
+.search input {
+  width: 100%;
+  padding: 11px 14px 11px 40px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.search input:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(13,27,75,.08);
+}
+.search svg {
+  position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
+  width: 16px; height: 16px; color: var(--muted);
+  pointer-events: none;
+}
+.sort-select, .school-select {
+  padding: 11px 32px 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%236b7385' d='M5 6 0 0h10z'/></svg>") no-repeat right 12px center;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color .15s;
+}
+.sort-select:hover, .school-select:hover { border-color: var(--navy-soft); }
+.school-select { min-width: 240px; flex: 1; max-width: 380px; }
+
+/* Segmented control - competition */
+.segmented {
+  display: inline-flex;
+  padding: 3px;
+  background: var(--line-soft);
+  border-radius: 10px;
+  gap: 2px;
+}
+.segmented button {
+  padding: 8px 14px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: .86rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: all .15s;
+  white-space: nowrap;
+}
+.segmented button:hover { color: var(--ink); }
+.segmented button.active {
+  background: #fff;
+  color: var(--navy);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Chip rows */
+.chip-row {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  align-items: center;
+}
+.chip-label {
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  margin-right: 6px;
+}
+.chip {
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  cursor: pointer;
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--ink);
+  transition: all .15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.chip:hover { border-color: var(--navy-soft); }
+.chip .count {
+  font-size: .7rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+.chip.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+.chip.active .count { color: rgba(255,255,255,.7); }
+.chip.award-chip.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy);
+}
+.chip.award-chip.active .count { color: rgba(13,27,75,.65); }
+
+.clear-btn {
+  margin-left: auto;
+  padding: 6px 10px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: .8rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.clear-btn:hover { color: var(--navy); }
+.clear-btn[hidden] { display: none; }
+
+/* ============================================================
+   RESULTS
+   ============================================================ */
+.results-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 28px clamp(14px, 4vw, 40px) 80px;
+}
+.results-meta {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 18px;
+  flex-wrap: wrap; gap: 12px;
+}
+.results-count {
+  color: var(--muted);
+  font-size: .9rem;
+}
+.results-count strong { color: var(--ink); font-weight: 600; }
+
+.legend {
+  margin: 0;
+  font-size: .82rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+}
+.legend-item { display: inline-flex; align-items: center; gap: 6px; }
+.legend strong {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--line-soft);
+  color: var(--navy);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: .72rem;
+  letter-spacing: .04em;
+  font-family: var(--sans);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+/* Card */
+.card {
+  position: relative;
+  padding: 18px 18px 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all .18s;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--navy-soft);
+  box-shadow: var(--shadow-md);
+}
+.card:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.card-grade {
+  display: inline-flex; align-items: center;
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gold);
+  padding: 4px 10px;
+  border: 1px solid var(--gold-soft);
+  background: rgba(201,168,76,.06);
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.card-name {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--navy);
+  margin: 0;
+  word-break: break-word;
+}
+.card-school {
+  font-size: .82rem;
+  color: var(--muted);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.card-medals {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+}
+
+.medal-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 9px 4px 6px;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 600;
+  background: var(--line-soft);
+  color: var(--muted);
+  border: 1px solid transparent;
+}
+.medal-pill .dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--muted);
+  display: inline-block;
+  flex-shrink: 0;
+}
+.medal-pill .comp {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.medal-pill.perfect { background: linear-gradient(135deg, #fff8e1, #f4ead0); color: #6b4d00; border-color: var(--gold); }
+.medal-pill.perfect .dot { background: linear-gradient(135deg, var(--gold-bright), var(--gold)); box-shadow: 0 0 0 2px rgba(201,168,76,.25); }
+.medal-pill.gold { background: linear-gradient(135deg, #fff8e1, #f4ead0); color: #6b4d00; border-color: rgba(201,168,76,.4); }
+.medal-pill.gold .dot { background: linear-gradient(135deg, var(--gold-bright), var(--gold)); }
+.medal-pill.silver { background: #f1f3f6; color: #4a525e; border-color: rgba(159,167,178,.4); }
+.medal-pill.silver .dot { background: linear-gradient(135deg, #e3e6eb, var(--silver)); }
+.medal-pill.bronze { background: #fbf1e7; color: #6b4119; border-color: rgba(192,138,74,.35); }
+.medal-pill.bronze .dot { background: linear-gradient(135deg, #d9a674, var(--bronze)); }
+.medal-pill.hm { background: #eef1f7; color: #4a525e; border-color: var(--line); }
+.medal-pill.hm .dot { background: var(--hm); }
+.medal-pill.part { background: #f5f6fb; color: var(--muted); border-color: var(--line); opacity: .85; }
+.medal-pill.part .dot { background: #c0c6d0; }
+
+.card-points {
+  position: absolute;
+  top: 18px; right: 18px;
+  font-family: var(--display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+.card-points small {
+  display: block;
+  font-family: var(--sans);
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 3px;
+  text-align: right;
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--muted);
+}
+.empty h3 {
+  font-family: var(--display);
+  font-size: 1.6rem;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+
+/* ============================================================
+   MODAL
+   ============================================================ */
+.modal-backdrop {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(8,18,50,.7);
+  backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  opacity: 0; pointer-events: none;
+  transition: opacity .2s;
+}
+.modal-backdrop.open { opacity: 1; pointer-events: auto; }
+.modal {
+  background: #fff;
+  border-radius: 18px;
+  max-width: 560px; width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  transform: scale(.96);
+  transition: transform .2s;
+}
+.modal-backdrop.open .modal { transform: scale(1); }
+
+.modal-head {
+  position: relative;
+  padding: 28px 28px 22px;
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: #fff;
+  border-radius: 18px 18px 0 0;
+}
+.modal-head::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
+}
+.modal-close {
+  position: absolute; top: 14px; right: 14px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.12);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: background .15s;
+}
+.modal-close:hover { background: rgba(255,255,255,.22); }
+
+.modal-eyebrow {
+  font-size: .68rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+.modal-name {
+  font-family: var(--sans);
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -.005em;
+}
+.modal-school {
+  margin: 8px 0 0;
+  color: rgba(255,255,255,.78);
+  font-size: .92rem;
+}
+
+.modal-body { padding: 24px 28px 28px; }
+
+.modal-section {
+  margin-bottom: 22px;
+}
+.modal-section:last-child { margin-bottom: 0; }
+.modal-section-label {
+  font-size: .68rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.info-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 14px 24px;
+}
+.info-item {
+  display: flex; flex-direction: column;
+}
+.info-label {
+  font-size: .72rem;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.info-value {
+  font-size: .95rem;
+  color: var(--ink);
+  font-weight: 600;
+  font-family: var(--display);
+}
+.info-value.mono {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: .88rem;
+  font-weight: 500;
+}
+
+.competitions {
+  display: flex; flex-direction: column; gap: 10px;
+}
+.comp-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 14px;
+  background: var(--paper);
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+.comp-row .comp-name {
+  font-weight: 600;
+  font-size: .92rem;
+}
+.comp-row .comp-sub {
+  display: block;
+  font-size: .72rem;
+  color: var(--muted);
+  font-weight: 500;
+  margin-top: 2px;
+}
+.comp-row .comp-extra {
+  font-size: .72rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.comp-row.no-result { opacity: .55; }
+.comp-row.no-result .comp-medal {
+  color: var(--muted);
+  font-size: .8rem;
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .info-grid { grid-template-columns: 1fr; }
+  .modal-head { padding: 24px 20px 18px; }
+  .modal-body { padding: 20px 20px 24px; }
+  .card-points { font-size: 1.2rem; }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 28px 20px 40px;
+  color: var(--muted);
+  font-size: .8rem;
+  border-top: 1px solid var(--line);
+  background: #fff;
+}
+.footer strong { color: var(--navy); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-top">
+      <div>
+        <p class="eyebrow">SIMOC 2025 · The Brainiac Factory · Cambodia</p>
+        <h1>Competition <em>Results</em></h1>
+        <p class="lede">Search and browse Cambodia's results from the Singapore International Math Olympiad Challenge — across Math Olympiad, Math Warrior, and Math Master Mind categories.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="stat-num">160</div><div class="stat-label">Competitors</div></div>
+        <div class="stat"><div class="stat-num">153</div><div class="stat-label">Medals</div></div>
+        <div class="stat"><div class="stat-num">47</div><div class="stat-label">Schools</div></div>
+        <div class="stat"><div class="stat-num">12</div><div class="stat-label">Grade Levels</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="controls" aria-label="Filters">
+  <div class="controls-inner">
+    <div class="row1">
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="search" type="search" placeholder="Search by name, school, or certificate number…" autocomplete="off">
+      </label>
+      <select id="sort" class="sort-select" aria-label="Sort">
+        <option value="grade-asc">Grade (low to high)</option>
+        <option value="grade-desc">Grade (high to low)</option>
+        <option value="points-desc">Points (high to low)</option>
+        <option value="name-asc">Name (A–Z)</option>
+        <option value="school-asc">School (A–Z)</option>
+      </select>
+      <select id="school" class="school-select" aria-label="Filter by school">
+        <option value="">All schools (47)</option>
+      </select>
+    </div>
+
+    <div class="chip-row" role="group" aria-label="Competition">
+      <span class="chip-label">Competition</span>
+      <div class="segmented" id="comp-seg">
+        <button data-comp="all" class="active">All</button>
+        <button data-comp="mo">Math Olympiad</button>
+        <button data-comp="mw">Math Warrior</button>
+        <button data-comp="mmm">Math Master Mind</button>
+      </div>
+    </div>
+
+    <div class="chip-row" id="grade-chips" role="group" aria-label="Grade">
+      <span class="chip-label">Grade</span>
+      <!-- Populated by JS -->
+    </div>
+
+    <div class="chip-row" id="award-chips" role="group" aria-label="Award">
+      <span class="chip-label">Award</span>
+      <!-- Populated by JS -->
+      <button id="clear-btn" class="clear-btn" hidden>Clear filters</button>
+    </div>
+  </div>
+</section>
+
+<section class="results-section">
+  <div class="results-meta">
+    <p class="results-count">Showing <strong id="count">160</strong> of 160 competitors</p>
+    <p class="legend">
+      <span class="legend-item"><strong>MO</strong> Math Olympiad</span>
+      <span class="legend-item"><strong>MW</strong> Math Warrior</span>
+      <span class="legend-item"><strong>MMM</strong> Math Master Mind</span>
+    </p>
+  </div>
+  <div id="grid" class="grid"></div>
+  <div id="empty" class="empty" hidden>
+    <h3>No matches</h3>
+    <p>Try clearing some filters or adjusting your search.</p>
+  </div>
+</section>
+
+<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-name" hidden>
+  <div class="modal">
+    <div class="modal-head">
+      <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+      <p class="modal-eyebrow" id="modal-eyebrow">Grade · School</p>
+      <h2 class="modal-name" id="modal-name">Student Name</h2>
+      <p class="modal-school" id="modal-school">School</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <p class="modal-section-label">Registration</p>
+        <div class="info-grid">
+          <div class="info-item"><span class="info-label">Certificate №</span><span class="info-value mono" id="modal-cert"></span></div>
+          <div class="info-item"><span class="info-label">Index №</span><span class="info-value mono" id="modal-index"></span></div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <p class="modal-section-label">Competition Results</p>
+        <div class="competitions" id="modal-comps"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p><strong>The Brainiac Factory</strong> · SIMCC Country Partner, Cambodia · SIMOC 2025 Results</p>
+</footer>
+
+<script>
+// ============================================================
+// DATA - embedded for single-file deployment
+// ============================================================
+const DATA = [{"name":"HUN PICHMONYRITHYSETH","grade":"Grade 1","school":"INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001120,"cert_no":"A0497627","points_mo":85,"mo_award":"PERFECT SCORE","mw_award":"SILVER","mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"PERFECT SCORE 1"},{"name":"NAY VONGSASTRA","grade":"Grade 1","school":"LIFE INTERNATIONAL SCHOOL","index":855251001117,"cert_no":"A0497624","points_mo":55,"mo_award":"SILVER","mw_award":null,"mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"SILVER 9"},{"name":"CHAN BUDDHI THORANEN","grade":"Grade 1","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001110,"cert_no":"A0497617","points_mo":48,"mo_award":"BRONZE","mw_award":null,"mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"BRONZE 14"},{"name":"CHHIM SOTHYWAN ETHAN","grade":"Grade 1","school":"HARRODS INTERNATIONAL ACADEMY","index":855251001115,"cert_no":"A0497622","points_mo":43,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"HONORABLE MENTION 1"},{"name":"TIV VISUDH AMARA","grade":"Grade 1","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001108,"cert_no":"A0497615","points_mo":43,"mo_award":"HONORABLE MENTION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"HONORABLE MENTION 1"},{"name":"SEAR SAMNANG","grade":"Grade 1","school":"SINGAPORE (CAMBODIA) INTERNATIONAL ACADEMY","index":855251001113,"cert_no":"A0497620","points_mo":41,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"HONORABLE MENTION 7"},{"name":"AN CHEY CHULSA","grade":"Grade 1","school":"THE BRITISH INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001111,"cert_no":"A0497618","points_mo":39,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"HONORABLE MENTION 13"},{"name":"DETH PANHAVITOU","grade":"Grade 1","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001107,"cert_no":"A0497614","points_mo":36,"mo_award":"HONORABLE MENTION","mw_award":"SILVER","mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"HONORABLE MENTION 20"},{"name":"LIM SIVCHHENG","grade":"Grade 1","school":"SINGAPORE (CAMBODIA) INTERNATIONAL ACADEMY","index":855251001109,"cert_no":"A0497616","points_mo":32,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 1"},{"name":"SOU BHIVADH","grade":"Grade 1","school":"INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001106,"cert_no":"A0497613","points_mo":28,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 9"},{"name":"LI YUJIA","grade":"Grade 1","school":"NIRA INTERNATIONAL SCHOOL","index":855251001119,"cert_no":"A0497626","points_mo":20,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 20"},{"name":"MEN LUNKUNPISOT","grade":"Grade 1","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001118,"cert_no":"A0497625","points_mo":19,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 22"},{"name":"BONA CHANMONIREACH","grade":"Grade 1","school":"ICS INTERNATIONAL SCHOOL","index":855251001105,"cert_no":"A0497612","points_mo":16,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 24"},{"name":"PICH NITAMANET","grade":"Grade 1","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001114,"cert_no":"A0497621","points_mo":13,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"GOLD","mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 25"},{"name":"SAY LYSENGHONG","grade":"Grade 1","school":"BONDOSBRACHNHA INTERNATIONAL ACADEMY","index":855251001116,"cert_no":"A0497623","points_mo":13,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 25"},{"name":"EM VEHA","grade":"Grade 1","school":"USA INTERNATIONAL SCHOOL PHNOM PENH","index":855251001112,"cert_no":"A0497619","points_mo":6,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 1 / Primary 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 31"},{"name":"KIM HYSUNG","grade":"Grade 2","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001121,"cert_no":"A0497628","points_mo":55,"mo_award":"SILVER","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 2 / Primary 2","mo_global_rank":"SILVER 23"},{"name":"MANN VANNPICHMONY","grade":"Grade 2","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001129,"cert_no":"A0497636","points_mo":51,"mo_award":"BRONZE","mw_award":"SILVER","mmm_award":null,"grade_full":"Grade 2 / Primary 2","mo_global_rank":"BRONZE 1"},{"name":"TES HEANH SETHA EK","grade":"Grade 2","school":"SINGAPORE (CAMBODIA) INTERNATIONAL ACADEMY","index":855251001124,"cert_no":"A0497631","points_mo":48,"mo_award":"BRONZE","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 2 / Primary 2","mo_global_rank":"BRONZE 12"},{"name":"LIM KEASENG","grade":"Grade 2","school":"SINGAPORE (CAMBODIA) INTERNATIONAL ACADEMY","index":855251001128,"cert_no":"A0497635","points_mo":46,"mo_award":"BRONZE","mw_award":null,"mmm_award":null,"grade_full":"Grade 2 / Primary 2","mo_global_rank":"BRONZE 19"},{"name":"CHOMROEUN SAMITTHIK","grade":"Grade 2","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001167,"cert_no":"A0497674","points_mo":44,"mo_award":"BRONZE","mw_award":null,"mmm_award":null,"grade_full":"Grade 2 / Primary 2","mo_global_rank":"BRONZE 26"},{"name":"SON SATHABOTH","grade":"Grade 2","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001127,"cert_no":"A0497634","points_mo":39,"mo_award":"BRONZE","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 2 / Primary 2","mo_global_rank":"BRONZE 45"},{"name":"SENG CHHUN NAVIKA","grade":"Grade 2","school":"TIA INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001133,"cert_no":"A0497640","points_mo":35,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 2 / Primary 2","mo_global_rank":"HONORABLE MENTION 7"},{"name":"CHHOM CHHORDAPHEA","grade":"Grade 2","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001126,"cert_no":"A0497633","points_mo":29,"mo_award":"HONORABLE MENTION","mw_award":"SILVER","mmm_award":null,"grade_full":"Grade 2 / Primary 2","mo_global_rank":"HONORABLE MENTION 33"},{"name":"KHU POVMEANPICHEVALYNN","grade":"Grade 2","school":"FIRST INTERNATIONAL CAMBODIAN-AMERICAN SCHOOL","index":855251001123,"cert_no":"A0497630","points_mo":28,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 2 / Primary 2","mo_global_rank":"CERTIFICATE OF PARTICIPATION 1"},{"name":"MAM SAMRITHCHESDA","grade":"Grade 2","school":"GOLDEN GATE AMERICAN SCHOOL","index":855251001130,"cert_no":"A0497637","points_mo":27,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"SILVER","mmm_award":null,"grade_full":"Grade 2 / Primary 2","mo_global_rank":"CERTIFICATE OF PARTICIPATION 8"},{"name":"HUAL ROSERITHISAK","grade":"Grade 2","school":"HARRODS INTERNATIONAL ACADEMY","index":855251001125,"cert_no":"A0497632","points_mo":25,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 2 / Primary 2","mo_global_rank":"CERTIFICATE OF PARTICIPATION 17"},{"name":"CHEA WINNIE","grade":"Grade 2","school":"WESTERN INTERNATIONAL SCHOOL","index":855251001131,"cert_no":"A0497638","points_mo":24,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 2 / Primary 2","mo_global_rank":"CERTIFICATE OF PARTICIPATION 27"},{"name":"SARIN SONNARA","grade":"Grade 2","school":"PANNASASTRA INTERNATIONAL SCHOOL","index":855251001132,"cert_no":"A0497639","points_mo":9,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 2 / Primary 2","mo_global_rank":"CERTIFICATE OF PARTICIPATION 64"},{"name":"NOP SOPHEA WARREN","grade":"Grade 3","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001147,"cert_no":"A0497654","points_mo":54,"mo_award":"SILVER","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"SILVER 8"},{"name":"SOK MANITH","grade":"Grade 3","school":"ICS INTERNATIONAL SCHOOL","index":855251001134,"cert_no":"A0497641","points_mo":50,"mo_award":"SILVER","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"SILVER 26"},{"name":"PO PAKNIT","grade":"Grade 3","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001141,"cert_no":"A0497648","points_mo":48,"mo_award":"SILVER","mw_award":"SILVER","mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"SILVER 37"},{"name":"KENG PHANRATANAK","grade":"Grade 3","school":"AMERICAN PACIFIC INTERNATIONAL SCHOOL","index":855251001150,"cert_no":"A0497657","points_mo":44,"mo_award":"BRONZE","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"BRONZE 13"},{"name":"LIM DELUXEKITYA","grade":"Grade 3","school":"HARRODS INTERNATIONAL ACADEMY","index":855251001137,"cert_no":"A0497644","points_mo":41,"mo_award":"BRONZE","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"BRONZE 34"},{"name":"TAN TUANLE","grade":"Grade 3","school":"KENT RIDGE INTERNATIONAL SCHOOL","index":855251001153,"cert_no":"A0497660","points_mo":37,"mo_award":"BRONZE","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"BRONZE 60"},{"name":"VANN KARILYN","grade":"Grade 3","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001145,"cert_no":"A0497652","points_mo":37,"mo_award":"BRONZE","mw_award":"GOLD","mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"BRONZE 60"},{"name":"SAMNANG SAMRITHIYUT","grade":"Grade 3","school":"WESTERN INTERNATIONAL SCHOOL","index":855251001136,"cert_no":"A0497643","points_mo":35,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"HONORABLE MENTION 1"},{"name":"KY YEAN CHEN","grade":"Grade 3","school":"SINGAPORE (CAMBODIA) INTERNATIONAL ACADEMY","index":855251001149,"cert_no":"A0497656","points_mo":34,"mo_award":"HONORABLE MENTION","mw_award":"SILVER","mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"HONORABLE MENTION 8"},{"name":"VITHYEAR SORENNA","grade":"Grade 3","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001148,"cert_no":"A0497655","points_mo":34,"mo_award":"HONORABLE MENTION","mw_award":"GOLD","mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"HONORABLE MENTION 8"},{"name":"TIV VISUDH DARINY","grade":"Grade 3","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001139,"cert_no":"A0497646","points_mo":31,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"HONORABLE MENTION 23"},{"name":"DETH DAMY","grade":"Grade 3","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001138,"cert_no":"A0497645","points_mo":29,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"HONORABLE MENTION 42"},{"name":"SIHAK SOVANN","grade":"Grade 3","school":"HARRODS INTERNATIONAL ACADEMY","index":855251001159,"cert_no":"A0497666","points_mo":29,"mo_award":"HONORABLE MENTION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"HONORABLE MENTION 42"},{"name":"PAULIN THERAKOUTDOM","grade":"Grade 3","school":"ICS INTERNATIONAL SCHOOL","index":855251001143,"cert_no":"A0497650","points_mo":28,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"HONORABLE MENTION 49"},{"name":"SOPHETRA FIONA","grade":"Grade 3","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001140,"cert_no":"A0497647","points_mo":28,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"HONORABLE MENTION 49"},{"name":"LY MEYHOUR","grade":"Grade 3","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001144,"cert_no":"A0497651","points_mo":27,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"CERTIFICATE OF PARTICIPATION 1"},{"name":"LEANG PUTHNISAI","grade":"Grade 3","school":"CANADIAN INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001151,"cert_no":"A0497658","points_mo":26,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"GOLD","mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"CERTIFICATE OF PARTICIPATION 13"},{"name":"PHEAK MUNIK WADHANA","grade":"Grade 3","school":"ECOLE FRANCAISE INTERNATIONALE","index":855251001157,"cert_no":"A0497664","points_mo":18,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"CERTIFICATE OF PARTICIPATION 46"},{"name":"BONA MOLYNNA","grade":"Grade 3","school":"ICS INTERNATIONAL SCHOOL","index":855251001135,"cert_no":"A0497642","points_mo":16,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"CERTIFICATE OF PARTICIPATION 53"},{"name":"CHEA KEVIN","grade":"Grade 3","school":"VISION BRIDGE INTERNATIONAL ACADEMY","index":855251001156,"cert_no":"A0497663","points_mo":15,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"CERTIFICATE OF PARTICIPATION 56"},{"name":"CHIN MATHANNAVONEATH","grade":"Grade 3","school":"NIRA INTERNATIONAL SCHOOL","index":855251001158,"cert_no":"A0497665","points_mo":15,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"GOLD","mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"CERTIFICATE OF PARTICIPATION 56"},{"name":"SOK SUOS VANNABELLE","grade":"Grade 3","school":"SINGAPORE (CAMBODIA) INTERNATIONAL ACADEMY","index":855251001142,"cert_no":"A0497649","points_mo":15,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"CERTIFICATE OF PARTICIPATION 56"},{"name":"IV SETHIWIN","grade":"Grade 3","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001146,"cert_no":"A0497653","points_mo":14,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"CERTIFICATE OF PARTICIPATION 61"},{"name":"CHEA NATALIE","grade":"Grade 3","school":"VISION BRIDGE INTERNATIONAL ACADEMY","index":855251001155,"cert_no":"A0497662","points_mo":12,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"CERTIFICATE OF PARTICIPATION 63"},{"name":"EANG SREYKANITHA","grade":"Grade 3","school":"HERITAGE INTERNATIONAL SCHOOL","index":855251001154,"cert_no":"A0497661","points_mo":12,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"CERTIFICATE OF PARTICIPATION 63"},{"name":"LEK DYMALISSA","grade":"Grade 3","school":"ABUNDANT LIFE INTERNATIONAL SCHOOL","index":855251001152,"cert_no":"A0497659","points_mo":6,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 3 / Primary 3","mo_global_rank":"CERTIFICATE OF PARTICIPATION 79"},{"name":"KEA SOKMADEN","grade":"Grade 4","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001168,"cert_no":"A0497675","points_mo":69,"mo_award":"GOLD","mw_award":"BRONZE","mmm_award":"SILVER","grade_full":"Grade 4 / Primary 4","mo_global_rank":"GOLD 13"},{"name":"PANHAVUTH NOU","grade":"Grade 4","school":"AUSTRALIAN INTERNATIONAL SCHOOL PHNOM PENH","index":855251001173,"cert_no":"A0497680","points_mo":67,"mo_award":"GOLD","mw_award":null,"mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"GOLD 16"},{"name":"AING VIRAKBOTH","grade":"Grade 4","school":"WESTERN INTERNATIONAL SCHOOL","index":855251001160,"cert_no":"A0497667","points_mo":64,"mo_award":"GOLD","mw_award":null,"mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"GOLD 28"},{"name":"LIM RATTANAK","grade":"Grade 4","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001238,"cert_no":"A0497745","points_mo":63,"mo_award":"SILVER","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 4 / Primary 4","mo_global_rank":"SILVER 1"},{"name":"CHHOM CHAKRAYUTE","grade":"Grade 4","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001170,"cert_no":"A0497677","points_mo":62,"mo_award":"SILVER","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"SILVER 5"},{"name":"RETH THYDARANIN","grade":"Grade 4","school":"ICAN BRITISH INTERNATIONAL SCHOOL","index":855251001180,"cert_no":"A0497687","points_mo":44,"mo_award":"BRONZE","mw_award":"BRONZE","mmm_award":"SILVER","grade_full":"Grade 4 / Primary 4","mo_global_rank":"BRONZE 36"},{"name":"YOS SOVICHET","grade":"Grade 4","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001179,"cert_no":"A0497686","points_mo":38,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"HONORABLE MENTION 1"},{"name":"CHAO VUTHARANITH","grade":"Grade 4","school":"MTEL INTERNATIONAL SCHOOL","index":855251001169,"cert_no":"A0497676","points_mo":37,"mo_award":"HONORABLE MENTION","mw_award":"GOLD","mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"HONORABLE MENTION 12"},{"name":"POENG SENGTHAI","grade":"Grade 4","school":"KENT RIDGE INTERNATIONAL SCHOOL","index":855251001166,"cert_no":"A0497673","points_mo":34,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"HONORABLE MENTION 40"},{"name":"CHOMROEUN RITHYPUL","grade":"Grade 4","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001122,"cert_no":"A0497629","points_mo":33,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":"GOLD","grade_full":"Grade 4 / Primary 4","mo_global_rank":"HONORABLE MENTION 48"},{"name":"KOLA SOVANSTELLA","grade":"Grade 4","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001165,"cert_no":"A0497672","points_mo":32,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"HONORABLE MENTION 56"},{"name":"CHOONG ATHENA","grade":"Grade 4","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001181,"cert_no":"A0497688","points_mo":30,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 4 / Primary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 6"},{"name":"HEAPHOK SONTARAK","grade":"Grade 4","school":"WESTERN INTERNATIONAL SCHOOL","index":855251001177,"cert_no":"A0497684","points_mo":30,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 6"},{"name":"MAM EMILYSOCHEATA","grade":"Grade 4","school":"GOLDEN GATE AMERICAN SCHOOL","index":855251001176,"cert_no":"A0497683","points_mo":30,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"SILVER","mmm_award":"BRONZE","grade_full":"Grade 4 / Primary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 6"},{"name":"MANN VANNARONG","grade":"Grade 4","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001175,"cert_no":"A0497682","points_mo":28,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 18"},{"name":"SOU DAMONIQUE","grade":"Grade 4","school":"INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001162,"cert_no":"A0497669","points_mo":26,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 30"},{"name":"PO PICHETH","grade":"Grade 4","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001164,"cert_no":"A0497671","points_mo":25,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"GOLD","mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 37"},{"name":"HONG CHHAYNGORNG","grade":"Grade 4","school":"PARAGON INTERNATIONAL SCHOOL","index":855251001198,"cert_no":"A0497705","points_mo":23,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"SILVER","mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 51"},{"name":"MEAV SOWATTHANACK","grade":"Grade 4","school":"WORLD INTERNATIONAL SCHOOL CAMBODIA","index":855251001182,"cert_no":"A0497689","points_mo":23,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 51"},{"name":"HOUTH DALIN NITYA","grade":"Grade 4","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001161,"cert_no":"A0497668","points_mo":22,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 56"},{"name":"EANG SOEURN LEAP VISOTH","grade":"Grade 4","school":"HERITAGE INTERNATIONAL SCHOOL","index":855251001174,"cert_no":"A0497681","points_mo":19,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"SILVER","mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 70"},{"name":"MEN LUNKUNNISAI","grade":"Grade 4","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001171,"cert_no":"A0497678","points_mo":19,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"GOLD","mmm_award":"BRONZE","grade_full":"Grade 4 / Primary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 70"},{"name":"VICHEA SOKUNLYLY","grade":"Grade 4","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001207,"cert_no":"A0497714","points_mo":18,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"SILVER","mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 75"},{"name":"LIM MOUYLY","grade":"Grade 4","school":"ICS INTERNATIONAL SCHOOL","index":855251001178,"cert_no":"A0497685","points_mo":13,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"SILVER","mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 84"},{"name":"TRY GEMSAPPHIRE","grade":"Grade 4","school":"AUSTRALIAN INTERNATIONAL SCHOOL PHNOM PENH","index":855251001163,"cert_no":"A0497670","points_mo":12,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 4 / Primary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 86"},{"name":"THEA PORNGY","grade":"Grade 5","school":"HARRODS INTERNATIONAL ACADEMY","index":855251001194,"cert_no":"A0497701","points_mo":70,"mo_award":"GOLD","mw_award":null,"mmm_award":"GOLD","grade_full":"Grade 5 / Primary 5","mo_global_rank":"GOLD 20"},{"name":"HUN KUNAWARD","grade":"Grade 5","school":"WESTVIEW CAMBODIAN INTERNATIONAL SCHOOL","index":855251001183,"cert_no":"A0497690","points_mo":66,"mo_award":"GOLD","mw_award":null,"mmm_award":null,"grade_full":"Grade 5 / Primary 5","mo_global_rank":"GOLD 27"},{"name":"DAMBURAE LIYANAGE YASAS THARINDA DAMSARA","grade":"Grade 5","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001199,"cert_no":"A0497706","points_mo":59,"mo_award":"SILVER","mw_award":null,"mmm_award":null,"grade_full":"Grade 5 / Primary 5","mo_global_rank":"SILVER 12"},{"name":"CHHENG JOLIE MONIKA","grade":"Grade 5","school":"AUSTRALIAN INTERNATIONAL SCHOOL PHNOM PENH","index":855251001186,"cert_no":"A0497693","points_mo":53,"mo_award":"SILVER","mw_award":null,"mmm_award":null,"grade_full":"Grade 5 / Primary 5","mo_global_rank":"SILVER 39"},{"name":"LIM SONGCHHAY","grade":"Grade 5","school":"SINGAPORE (CAMBODIA) INTERNATIONAL ACADEMY","index":855251001185,"cert_no":"A0497692","points_mo":51,"mo_award":"SILVER","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 5 / Primary 5","mo_global_rank":"SILVER 46"},{"name":"NAO USENG","grade":"Grade 5","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001204,"cert_no":"A0497711","points_mo":49,"mo_award":"BRONZE","mw_award":null,"mmm_award":"SILVER","grade_full":"Grade 5 / Primary 5","mo_global_rank":"BRONZE 6"},{"name":"HUK SOPHANNARITH","grade":"Grade 5","school":"PANNASASTRA INTERNATIONAL SCHOOL","index":855251001191,"cert_no":"A0497698","points_mo":37,"mo_award":"BRONZE","mw_award":null,"mmm_award":null,"grade_full":"Grade 5 / Primary 5","mo_global_rank":"BRONZE 70"},{"name":"PHEAK ROTH CHHADA","grade":"Grade 5","school":"CANADIAN INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001203,"cert_no":"A0497710","points_mo":33,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 5 / Primary 5","mo_global_rank":"HONORABLE MENTION 10"},{"name":"CHHAY SONRITHMONY","grade":"Grade 5","school":"LEARNING JUNGLE INTERNATIONAL SCHOOL","index":855251001200,"cert_no":"A0497707","points_mo":28,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 5 / Primary 5","mo_global_rank":"HONORABLE MENTION 45"},{"name":"ENG VIRAKBOTH","grade":"Grade 5","school":"AMERICAN INTERCON SCHOOL","index":855251001201,"cert_no":"A0497708","points_mo":26,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":"SILVER","grade_full":"Grade 5 / Primary 5","mo_global_rank":"CERTIFICATE OF PARTICIPATION 1"},{"name":"CHHIM SEREYWATHANA MONICA","grade":"Grade 5","school":"HARRODS INTERNATIONAL ACADEMY","index":855251001192,"cert_no":"A0497699","points_mo":20,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 5 / Primary 5","mo_global_rank":"CERTIFICATE OF PARTICIPATION 30"},{"name":"EAR TECH CHHAY","grade":"Grade 5","school":"ZHONG YING INTERNATIONAL SCHOOL","index":855251001195,"cert_no":"A0497702","points_mo":18,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 5 / Primary 5","mo_global_rank":"CERTIFICATE OF PARTICIPATION 43"},{"name":"KY YEAN SI","grade":"Grade 5","school":"SINGAPORE (CAMBODIA) INTERNATIONAL ACADEMY","index":855251001193,"cert_no":"A0497700","points_mo":18,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 5 / Primary 5","mo_global_rank":"CERTIFICATE OF PARTICIPATION 43"},{"name":"VICHEA VICHEANY","grade":"Grade 5","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001184,"cert_no":"A0497691","points_mo":18,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 5 / Primary 5","mo_global_rank":"CERTIFICATE OF PARTICIPATION 43"},{"name":"KHU POVPICHCHANEDELYNN","grade":"Grade 5","school":"FIRST INTERNATIONAL CAMBODIAN-AMERICAN SCHOOL","index":855251001190,"cert_no":"A0497697","points_mo":17,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 5 / Primary 5","mo_global_rank":"CERTIFICATE OF PARTICIPATION 51"},{"name":"DUAN SHIYAO","grade":"Grade 5","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001197,"cert_no":"A0497704","points_mo":16,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 5 / Primary 5","mo_global_rank":"CERTIFICATE OF PARTICIPATION 54"},{"name":"LAN SOVAN JONEY","grade":"Grade 5","school":"TIA INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001189,"cert_no":"A0497696","points_mo":15,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 5 / Primary 5","mo_global_rank":"CERTIFICATE OF PARTICIPATION 56"},{"name":"AN CHEY SEYMA","grade":"Grade 5","school":"THE BRITISH INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001187,"cert_no":"A0497694","points_mo":12,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 5 / Primary 5","mo_global_rank":"CERTIFICATE OF PARTICIPATION 70"},{"name":"LIM RATTANAK PITOU","grade":"Grade 5","school":"THE BRITISH INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001188,"cert_no":"A0497695","points_mo":12,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 5 / Primary 5","mo_global_rank":"CERTIFICATE OF PARTICIPATION 70"},{"name":"BUN SEAVGHECH","grade":"Grade 5","school":"TRUE VISIONS INTERNATIONAL SCHOOL OF CAMBODIA","index":855251001196,"cert_no":"A0497703","points_mo":10,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 5 / Primary 5","mo_global_rank":"CERTIFICATE OF PARTICIPATION 77"},{"name":"RITH ROZE","grade":"Grade 5","school":"VISION BRIDGE INTERNATIONAL ACADEMY","index":855251001202,"cert_no":"A0497709","points_mo":6,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 5 / Primary 5","mo_global_rank":"CERTIFICATE OF PARTICIPATION 85"},{"name":"LY RITHDAVIS","grade":"Grade 6","school":"TIA INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001208,"cert_no":"A0497715","points_mo":64,"mo_award":"GOLD","mw_award":"BRONZE","mmm_award":"GOLD","grade_full":"Grade 6 / Primary 6","mo_global_rank":"GOLD 20"},{"name":"SRUN VIRAKBOT","grade":"Grade 6","school":"BELTEI INTERNATIONAL SCHOOL","index":855251001213,"cert_no":"A0497720","points_mo":60,"mo_award":"SILVER","mw_award":"GOLD","mmm_award":"BRONZE","grade_full":"Grade 6 / Primary 6","mo_global_rank":"SILVER 1"},{"name":"DUAN ZIXIN","grade":"Grade 6","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001214,"cert_no":"A0497721","points_mo":57,"mo_award":"SILVER","mw_award":null,"mmm_award":null,"grade_full":"Grade 6 / Primary 6","mo_global_rank":"SILVER 16"},{"name":"HUYSINH EA","grade":"Grade 6","school":"BRIGHT LINE INTERNATIONAL SCHOOL","index":855251001217,"cert_no":"A0497724","points_mo":54,"mo_award":"SILVER","mw_award":null,"mmm_award":null,"grade_full":"Grade 6 / Primary 6","mo_global_rank":"SILVER 32"},{"name":"CHHOM CHHAYAPRITE","grade":"Grade 6","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001211,"cert_no":"A0497718","points_mo":46,"mo_award":"BRONZE","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 6 / Primary 6","mo_global_rank":"BRONZE 29"},{"name":"HOK PUTHIYA","grade":"Grade 6","school":"AUSTRALIAN INTERNATIONAL SCHOOL PHNOM PENH","index":855251001210,"cert_no":"A0497717","points_mo":40,"mo_award":"BRONZE","mw_award":"GOLD","mmm_award":null,"grade_full":"Grade 6 / Primary 6","mo_global_rank":"BRONZE 65"},{"name":"HOUTH VIPHEA VETY","grade":"Grade 6","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001205,"cert_no":"A0497712","points_mo":33,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 6 / Primary 6","mo_global_rank":"HONORABLE MENTION 25"},{"name":"NGET SETHYKA","grade":"Grade 6","school":"BRITISH INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001172,"cert_no":"A0497679","points_mo":28,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"GOLD","mmm_award":null,"grade_full":"Grade 6 / Primary 6","mo_global_rank":"CERTIFICATE OF PARTICIPATION 14"},{"name":"TRY GEMMARINE","grade":"Grade 6","school":"AUSTRALIAN INTERNATIONAL SCHOOL PHNOM PENH","index":855251001206,"cert_no":"A0497713","points_mo":28,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 6 / Primary 6","mo_global_rank":"CERTIFICATE OF PARTICIPATION 14"},{"name":"CHIN MATHANNAVATTEY","grade":"Grade 6","school":"NIRA INTERNATIONAL SCHOOL","index":855251001215,"cert_no":"A0497722","points_mo":27,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 6 / Primary 6","mo_global_rank":"CERTIFICATE OF PARTICIPATION 18"},{"name":"PICH SOKRITHY","grade":"Grade 6","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001209,"cert_no":"A0497716","points_mo":24,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 6 / Primary 6","mo_global_rank":"CERTIFICATE OF PARTICIPATION 37"},{"name":"ROEUN PENGLY","grade":"Grade 6","school":"NIRA INTERNATIONAL SCHOOL","index":855251001218,"cert_no":"A0497725","points_mo":24,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 6 / Primary 6","mo_global_rank":"CERTIFICATE OF PARTICIPATION 37"},{"name":"CHHEA SOWATH KATTIYA","grade":"Grade 6","school":"NIRA INTERNATIONAL SCHOOL","index":855251001216,"cert_no":"A0497723","points_mo":18,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 6 / Primary 6","mo_global_rank":"CERTIFICATE OF PARTICIPATION 59"},{"name":"LIM SETHISAKD","grade":"Grade 7","school":"ICS INTERNATIONAL SCHOOL","index":855251001226,"cert_no":"A0497733","points_mo":75,"mo_award":"GOLD","mw_award":"BRONZE","mmm_award":"SILVER","grade_full":"Grade 7 / Secondary 1","mo_global_rank":"GOLD 2"},{"name":"SOK MONIKETSYA","grade":"Grade 7","school":"FOOTPRINTS INTERNATIONAL SCHOOL","index":855251001223,"cert_no":"A0497730","points_mo":39,"mo_award":"BRONZE","mw_award":null,"mmm_award":null,"grade_full":"Grade 7 / Secondary 1","mo_global_rank":"BRONZE 21"},{"name":"NGE MADOX","grade":"Grade 7","school":"PANNASASTRA INTERNATIONAL SCHOOL","index":855251001224,"cert_no":"A0497731","points_mo":38,"mo_award":"BRONZE","mw_award":null,"mmm_award":null,"grade_full":"Grade 7 / Secondary 1","mo_global_rank":"BRONZE 27"},{"name":"KHEANGSOPHANY P SPRING","grade":"Grade 7","school":"CANADIAN INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001221,"cert_no":"A0497728","points_mo":35,"mo_award":"BRONZE","mw_award":null,"mmm_award":null,"grade_full":"Grade 7 / Secondary 1","mo_global_rank":"BRONZE 51"},{"name":"KEA KUYVATANAK","grade":"Grade 7","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001219,"cert_no":"A0497726","points_mo":33,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":"GOLD","grade_full":"Grade 7 / Secondary 1","mo_global_rank":"HONORABLE MENTION 1"},{"name":"LY PUTHIREACH","grade":"Grade 7","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001225,"cert_no":"A0497732","points_mo":33,"mo_award":"HONORABLE MENTION","mw_award":"SILVER","mmm_award":"BRONZE","grade_full":"Grade 7 / Secondary 1","mo_global_rank":"HONORABLE MENTION 1"},{"name":"MEAS SOPORPICH","grade":"Grade 7","school":"NIRA INTERNATIONAL SCHOOL","index":855251001222,"cert_no":"A0497729","points_mo":30,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 7 / Secondary 1","mo_global_rank":"HONORABLE MENTION 22"},{"name":"NAO USEANG","grade":"Grade 7","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001229,"cert_no":"A0497736","points_mo":29,"mo_award":"HONORABLE MENTION","mw_award":"BRONZE","mmm_award":"BRONZE","grade_full":"Grade 7 / Secondary 1","mo_global_rank":"HONORABLE MENTION 30"},{"name":"KUOCH EVA","grade":"Grade 7","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001228,"cert_no":"A0497735","points_mo":25,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"SILVER","mmm_award":"BRONZE","grade_full":"Grade 7 / Secondary 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 20"},{"name":"CHHEA SOWATH NUREACH","grade":"Grade 7","school":"NIRA INTERNATIONAL SCHOOL","index":855251001230,"cert_no":"A0497737","points_mo":20,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 7 / Secondary 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 49"},{"name":"DOEUR SAPOR PONITA","grade":"Grade 7","school":"ICS INTERNATIONAL SCHOOL","index":855251001227,"cert_no":"A0497734","points_mo":18,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 7 / Secondary 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 56"},{"name":"LAY SEAMKEANG","grade":"Grade 7","school":"HARRODS INTERNATIONAL ACADEMY","index":855251001220,"cert_no":"A0497727","points_mo":16,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 7 / Secondary 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 63"},{"name":"HOR SAMBAT MALYNA","grade":"Grade 7","school":"TIA INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001263,"cert_no":"A0497866","points_mo":15,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 7 / Secondary 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 66"},{"name":"HENG THONG SOK","grade":"Grade 8","school":"NORTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001232,"cert_no":"A0497739","points_mo":70,"mo_award":"GOLD","mw_award":"SILVER","mmm_award":"GOLD","grade_full":"Grade 8 / Secondary 2","mo_global_rank":"GOLD 8"},{"name":"SENG BUNVINORAK","grade":"Grade 8","school":"TIA INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001237,"cert_no":"A0497744","points_mo":59,"mo_award":"SILVER","mw_award":"SILVER","mmm_award":null,"grade_full":"Grade 8 / Secondary 2","mo_global_rank":"SILVER 5"},{"name":"LAN SOVANMONEY","grade":"Grade 8","school":"TIA INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001236,"cert_no":"A0497743","points_mo":43,"mo_award":"BRONZE","mw_award":"GOLD","mmm_award":null,"grade_full":"Grade 8 / Secondary 2","mo_global_rank":"BRONZE 28"},{"name":"NGET SOROTTANAK","grade":"Grade 8","school":"BRITISH INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001212,"cert_no":"A0497719","points_mo":43,"mo_award":"BRONZE","mw_award":"GOLD","mmm_award":"SILVER","grade_full":"Grade 8 / Secondary 2","mo_global_rank":"BRONZE 28"},{"name":"JUHYUK PARK","grade":"Grade 8","school":"NORTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001231,"cert_no":"A0497738","points_mo":32,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 8 / Secondary 2","mo_global_rank":"HONORABLE MENTION 25"},{"name":"ROS CHEY CHESSDA","grade":"Grade 8","school":"THE BRITISH INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001233,"cert_no":"A0497740","points_mo":31,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 8 / Secondary 2","mo_global_rank":"HONORABLE MENTION 27"},{"name":"CHHIM VATANAK","grade":"Grade 8","school":"TIA INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001240,"cert_no":"A0497747","points_mo":27,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 8 / Secondary 2","mo_global_rank":"CERTIFICATE OF PARTICIPATION 17"},{"name":"THEL SEREY VATTANAK","grade":"Grade 8","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001239,"cert_no":"A0497746","points_mo":24,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 8 / Secondary 2","mo_global_rank":"CERTIFICATE OF PARTICIPATION 24"},{"name":"KOLA SOVANDOLLA","grade":"Grade 8","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001235,"cert_no":"A0497742","points_mo":22,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 8 / Secondary 2","mo_global_rank":"CERTIFICATE OF PARTICIPATION 30"},{"name":"LIM NORAKPONG","grade":"Grade 8","school":"THE BRITISH INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001234,"cert_no":"A0497741","points_mo":16,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 8 / Secondary 2","mo_global_rank":"CERTIFICATE OF PARTICIPATION 44"},{"name":"MAO VIREAKPONG","grade":"Grade 8","school":"TIA INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001241,"cert_no":"A0497748","points_mo":6,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"GOLD","mmm_award":"BRONZE","grade_full":"Grade 8 / Secondary 2","mo_global_rank":"CERTIFICATE OF PARTICIPATION 48"},{"name":"HE JING YEAK","grade":"Grade 9","school":"NORTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001264,"cert_no":"A0497873","points_mo":31,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":"SILVER","grade_full":"Grade 9 / Secondary 3","mo_global_rank":"HONORABLE MENTION 15"},{"name":"THUN ETHAN SOVISAL","grade":"Grade 9","school":"TIA INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001242,"cert_no":"A0497749","points_mo":23,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 9 / Secondary 3","mo_global_rank":"CERTIFICATE OF PARTICIPATION 17"},{"name":"LAN HAOYUE","grade":"Grade 9","school":"SINGAPORE (CAMBODIA) INTERNATIONAL ACADEMY","index":855251001248,"cert_no":"A0497755","points_mo":21,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 9 / Secondary 3","mo_global_rank":"CERTIFICATE OF PARTICIPATION 24"},{"name":"RY CHEAHENG","grade":"Grade 10","school":"PARAGON INTERNATIONAL SCHOOL","index":855251001245,"cert_no":"A0497752","points_mo":46,"mo_award":"SILVER","mw_award":"GOLD","mmm_award":"GOLD","grade_full":"Grade 10 / Secondary 4","mo_global_rank":"SILVER 20"},{"name":"KIM LENG","grade":"Grade 10","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001244,"cert_no":"A0497751","points_mo":29,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 10 / Secondary 4","mo_global_rank":"HONORABLE MENTION 21"},{"name":"CHHOI SEANEENG","grade":"Grade 10","school":"SOVANNAPHUMI SCHOOL","index":855251001246,"cert_no":"A0497753","points_mo":26,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 10 / Secondary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 6"},{"name":"LI JIALE","grade":"Grade 10","school":"SINGAPORE (CAMBODIA) INTERNATIONAL ACADEMY","index":855251001249,"cert_no":"A0497756","points_mo":23,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 10 / Secondary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 17"},{"name":"HENG PICHSEANG","grade":"Grade 10","school":"PREAH SIHANOUK HIGH SCHOOL","index":855251001250,"cert_no":"A0497757","points_mo":21,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"GOLD","mmm_award":null,"grade_full":"Grade 10 / Secondary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 25"},{"name":"SOEUN SOVANPANHA","grade":"Grade 10","school":"SOUTHBRIDGE INTERNATIONAL SCHOOL CAMBODIA","index":855251001243,"cert_no":"A0497750","points_mo":20,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 10 / Secondary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 28"},{"name":"PHENG VATANAK","grade":"Grade 10","school":"HOME OF ENGLISH INTERNATIONAL SCHOOL","index":855251001247,"cert_no":"A0497754","points_mo":18,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 10 / Secondary 4","mo_global_rank":"CERTIFICATE OF PARTICIPATION 34"},{"name":"KEA CHHORITA","grade":"Grade 11","school":"CIA FIRST INTERNATIONAL SCHOOL","index":855251001252,"cert_no":"A0497759","points_mo":53,"mo_award":"GOLD","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 11 / Junior College 1","mo_global_rank":"GOLD 9"},{"name":"SAMPUTHY KHIM","grade":"Grade 11","school":"WESTLAND INTERNATIONAL SCHOOL","index":855251001259,"cert_no":"A0497766","points_mo":41,"mo_award":"SILVER","mw_award":"GOLD","mmm_award":null,"grade_full":"Grade 11 / Junior College 1","mo_global_rank":"SILVER 15"},{"name":"UNG SENGLEAP","grade":"Grade 11","school":"MILKY WAY SCHOOL","index":855251001255,"cert_no":"A0497762","points_mo":40,"mo_award":"BRONZE","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 11 / Junior College 1","mo_global_rank":"BRONZE 1"},{"name":"PENH SERIVATTANAK","grade":"Grade 11","school":"PANNASASTRA INTERNATIONAL SCHOOL-VAN HONG","index":855251001261,"cert_no":"A0497768","points_mo":38,"mo_award":"BRONZE","mw_award":null,"mmm_award":null,"grade_full":"Grade 11 / Junior College 1","mo_global_rank":"BRONZE 8"},{"name":"SAT SOKVISAL","grade":"Grade 11","school":"KENT RIDGE INTERNATIONAL SCHOOL","index":855251001257,"cert_no":"A0497764","points_mo":31,"mo_award":"BRONZE","mw_award":null,"mmm_award":"GOLD","grade_full":"Grade 11 / Junior College 1","mo_global_rank":"BRONZE 30"},{"name":"SOUK LYSULINK","grade":"Grade 11","school":"HARRODS INTERNATIONAL ACADEMY","index":855251001254,"cert_no":"A0497761","points_mo":27,"mo_award":"HONORABLE MENTION","mw_award":null,"mmm_award":null,"grade_full":"Grade 11 / Junior College 1","mo_global_rank":"HONORABLE MENTION 11"},{"name":"THAN PANNHAVISAL","grade":"Grade 11","school":"HARRODS INTERNATIONAL ACADEMY","index":855251001256,"cert_no":"A0497763","points_mo":27,"mo_award":"HONORABLE MENTION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 11 / Junior College 1","mo_global_rank":"HONORABLE MENTION 11"},{"name":"MAO MUNYDARITH","grade":"Grade 11","school":"NEW GENERATION SCHOOL OF CHEA SIM PREK ANHCHANH HIGH SCHOOL","index":855251001260,"cert_no":"A0497767","points_mo":24,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"SILVER","mmm_award":null,"grade_full":"Grade 11 / Junior College 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 1"},{"name":"SOEUNSOKHOM ROTHAVATANAK","grade":"Grade 11","school":"AUPP High School - Foxcroft Academy","index":855251001253,"cert_no":"A0497760","points_mo":21,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"BRONZE","mmm_award":null,"grade_full":"Grade 11 / Junior College 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 16"},{"name":"LIM HENG LONG","grade":"Grade 11","school":"THE BRITISH INTERNATIONAL SCHOOL OF PHNOM PENH","index":855251001251,"cert_no":"A0497758","points_mo":18,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":null,"grade_full":"Grade 11 / Junior College 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 25"},{"name":"PHAL SALSAKADA","grade":"Grade 11","school":"EWHA SRANG SCHOOL","index":855251001258,"cert_no":"A0497765","points_mo":14,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":null,"mmm_award":"BRONZE","grade_full":"Grade 11 / Junior College 1","mo_global_rank":"CERTIFICATE OF PARTICIPATION 32"},{"name":"CHHUON VIRAKYUTH","grade":"Grade 12","school":"ICS INTERNATIONAL SCHOOL","index":855251001262,"cert_no":"A0497769","points_mo":22,"mo_award":"CERTIFICATE OF PARTICIPATION","mw_award":"GOLD","mmm_award":null,"grade_full":"Grade 12 / Junior College 2","mo_global_rank":"CERTIFICATE OF PARTICIPATION 8"}];
+
+// ============================================================
+// STATE
+// ============================================================
+const state = {
+  search: "",
+  sort: "grade-asc",
+  school: "",
+  competition: "all",   // all | mo | mw | mmm
+  grade: null,          // null = all, or "Grade 1" etc.
+  award: null,          // null = all, or "GOLD" etc.
+};
+
+const AWARD_RANK = {
+  "PERFECT SCORE": 0,
+  "GOLD": 1,
+  "SILVER": 2,
+  "BRONZE": 3,
+  "HONORABLE MENTION": 4,
+  "CERTIFICATE OF PARTICIPATION": 5,
+};
+
+const AWARD_LIST = [
+  ["PERFECT SCORE", "Perfect", "perfect"],
+  ["GOLD", "Gold", "gold"],
+  ["SILVER", "Silver", "silver"],
+  ["BRONZE", "Bronze", "bronze"],
+  ["HONORABLE MENTION", "Honorable Mention", "hm"],
+  ["CERTIFICATE OF PARTICIPATION", "Participation", "part"],
+];
+
+const COMP_LABEL = {
+  mo:  { full: "Math Olympiad",     short: "MO"  },
+  mw:  { full: "Math Warrior",      short: "MW"  },
+  mmm: { full: "Math Master Mind",  short: "MMM" },
+};
+
+// ============================================================
+// HELPERS
+// ============================================================
+function gradeNum(g) { return parseInt((g || "").replace("Grade ", ""), 10) || 0; }
+
+function awardForComp(record, comp) {
+  if (comp === "mo") return record.mo_award;
+  if (comp === "mw") return record.mw_award;
+  if (comp === "mmm") return record.mmm_award;
+  return null;
+}
+
+function studentAwards(record) {
+  return [
+    ["mo", record.mo_award],
+    ["mw", record.mw_award],
+    ["mmm", record.mmm_award],
+  ].filter(([_, a]) => a);
+}
+
+function awardClass(award) {
+  if (!award) return "";
+  const map = {
+    "PERFECT SCORE": "perfect",
+    "GOLD": "gold",
+    "SILVER": "silver",
+    "BRONZE": "bronze",
+    "HONORABLE MENTION": "hm",
+    "CERTIFICATE OF PARTICIPATION": "part",
+  };
+  return map[award] || "";
+}
+
+function awardShort(award) {
+  if (!award) return "";
+  return {
+    "PERFECT SCORE": "Perfect Score",
+    "GOLD": "Gold",
+    "SILVER": "Silver",
+    "BRONZE": "Bronze",
+    "HONORABLE MENTION": "Honorable Mention",
+    "CERTIFICATE OF PARTICIPATION": "Participation",
+  }[award];
+}
+
+// ============================================================
+// FILTERING
+// ============================================================
+function filteredRecords() {
+  const q = state.search.trim().toLowerCase();
+  let list = DATA.filter(r => {
+    // Search
+    if (q) {
+      const hay = `${r.name} ${r.school} ${r.cert_no} ${r.index}`.toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    // School
+    if (state.school && r.school !== state.school) return false;
+    // Grade
+    if (state.grade && r.grade !== state.grade) return false;
+    // Competition + Award
+    if (state.competition === "all") {
+      // Award filter applies to ANY competition
+      if (state.award) {
+        const awards = [r.mo_award, r.mw_award, r.mmm_award];
+        if (!awards.includes(state.award)) return false;
+      }
+    } else {
+      // Must have a result in that competition
+      const a = awardForComp(r, state.competition);
+      if (!a) return false;
+      if (state.award && a !== state.award) return false;
+    }
+    return true;
+  });
+  // Sort
+  const s = state.sort;
+  list.sort((a, b) => {
+    if (s === "grade-asc")  return gradeNum(a.grade) - gradeNum(b.grade) || (b.points_mo||0) - (a.points_mo||0);
+    if (s === "grade-desc") return gradeNum(b.grade) - gradeNum(a.grade) || (b.points_mo||0) - (a.points_mo||0);
+    if (s === "points-desc")return (b.points_mo||0) - (a.points_mo||0);
+    if (s === "name-asc")   return a.name.localeCompare(b.name);
+    if (s === "school-asc") return a.school.localeCompare(b.school) || gradeNum(a.grade) - gradeNum(b.grade);
+    return 0;
+  });
+  return list;
+}
+
+// ============================================================
+// RENDER
+// ============================================================
+function renderGradeChips() {
+  const counts = {};
+  for (const r of DATA) counts[r.grade] = (counts[r.grade] || 0) + 1;
+  const grades = Object.keys(counts).sort((a, b) => gradeNum(a) - gradeNum(b));
+
+  const container = document.getElementById("grade-chips");
+  // Clear existing chips (preserve label)
+  [...container.querySelectorAll(".chip")].forEach(n => n.remove());
+
+  // "All" chip
+  const allChip = document.createElement("button");
+  allChip.className = "chip" + (state.grade === null ? " active" : "");
+  allChip.innerHTML = `All <span class="count">${DATA.length}</span>`;
+  allChip.onclick = () => { state.grade = null; render(); };
+  container.appendChild(allChip);
+
+  for (const g of grades) {
+    const chip = document.createElement("button");
+    chip.className = "chip" + (state.grade === g ? " active" : "");
+    chip.innerHTML = `${g.replace("Grade ", "G")} <span class="count">${counts[g]}</span>`;
+    chip.onclick = () => { state.grade = state.grade === g ? null : g; render(); };
+    container.appendChild(chip);
+  }
+}
+
+function renderAwardChips() {
+  // Compute counts based on current competition filter
+  const counts = {};
+  for (const r of DATA) {
+    if (state.competition === "all") {
+      for (const a of [r.mo_award, r.mw_award, r.mmm_award]) {
+        if (a) counts[a] = (counts[a] || 0) + 1;
+      }
+    } else {
+      const a = awardForComp(r, state.competition);
+      if (a) counts[a] = (counts[a] || 0) + 1;
+    }
+  }
+
+  const container = document.getElementById("award-chips");
+  // Clear existing chips (preserve label + clear button)
+  [...container.querySelectorAll(".chip")].forEach(n => n.remove());
+
+  // "All" chip
+  const allChip = document.createElement("button");
+  allChip.className = "chip award-chip" + (state.award === null ? " active" : "");
+  allChip.innerHTML = `All`;
+  allChip.onclick = () => { state.award = null; render(); };
+  container.querySelector(".chip-label").after(allChip);
+
+  let prev = allChip;
+  for (const [key, label] of AWARD_LIST) {
+    if (!counts[key]) continue;
+    const chip = document.createElement("button");
+    chip.className = "chip award-chip" + (state.award === key ? " active" : "");
+    chip.innerHTML = `${label} <span class="count">${counts[key]}</span>`;
+    chip.onclick = () => { state.award = state.award === key ? null : key; render(); };
+    prev.after(chip);
+    prev = chip;
+  }
+}
+
+function renderSchoolDropdown() {
+  const counts = {};
+  for (const r of DATA) counts[r.school] = (counts[r.school] || 0) + 1;
+  const schools = Object.keys(counts).sort();
+  const sel = document.getElementById("school");
+  sel.innerHTML = `<option value="">All schools (${schools.length})</option>` +
+    schools.map(s => `<option value="${s.replace(/"/g,'&quot;')}">${s} (${counts[s]})</option>`).join("");
+  sel.value = state.school;
+}
+
+function renderCards(list) {
+  const grid = document.getElementById("grid");
+  const empty = document.getElementById("empty");
+  if (list.length === 0) {
+    grid.innerHTML = "";
+    empty.hidden = false;
+    return;
+  }
+  empty.hidden = true;
+  grid.innerHTML = list.map((r, idx) => cardHTML(r, idx)).join("");
+  // Wire up click
+  [...grid.querySelectorAll(".card")].forEach((el, i) => {
+    el.addEventListener("click", () => openModal(list[i]));
+    el.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openModal(list[i]); }
+    });
+  });
+}
+
+function cardHTML(r, i) {
+  const awards = studentAwards(r);
+  const pills = awards.map(([comp, award]) => {
+    const cls = awardClass(award);
+    const label = awardShort(award);
+    return `<span class="medal-pill ${cls}"><span class="dot"></span><span class="comp">${COMP_LABEL[comp].short}</span> ${label}</span>`;
+  }).join("");
+
+  const points = r.points_mo;
+  return `
+    <article class="card" tabindex="0" role="button" aria-label="View details for ${r.name}">
+      <div class="card-points">${points ?? 0}<small>MO pts</small></div>
+      <span class="card-grade">${r.grade}</span>
+      <h3 class="card-name">${r.name}</h3>
+      <p class="card-school">${r.school}</p>
+      <div class="card-medals">${pills || '<span class="medal-pill">No award</span>'}</div>
+    </article>
+  `;
+}
+
+function render() {
+  const list = filteredRecords();
+  document.getElementById("count").textContent = list.length;
+  renderGradeChips();
+  renderAwardChips();
+  renderCards(list);
+  // Show/hide clear button
+  const anyFilter = state.search || state.school || state.grade || state.award || state.competition !== "all";
+  document.getElementById("clear-btn").hidden = !anyFilter;
+}
+
+// ============================================================
+// MODAL
+// ============================================================
+function openModal(r) {
+  document.getElementById("modal-name").textContent = r.name;
+  document.getElementById("modal-eyebrow").textContent = `${r.grade_full || r.grade}`;
+  document.getElementById("modal-school").textContent = r.school;
+  document.getElementById("modal-cert").textContent = r.cert_no || "—";
+  document.getElementById("modal-index").textContent = r.index || "—";
+
+  const comps = document.getElementById("modal-comps");
+  const compEntries = [
+    { key: "mo",  label: "Math Olympiad",    award: r.mo_award,  points: r.points_mo, rank: r.mo_global_rank },
+    { key: "mw",  label: "Math Warrior",     award: r.mw_award,  points: null,        rank: null },
+    { key: "mmm", label: "Math Master Mind", award: r.mmm_award, points: null,        rank: null },
+  ];
+
+  comps.innerHTML = compEntries.map(c => {
+    if (!c.award) {
+      return `<div class="comp-row no-result">
+        <div><div class="comp-name">${c.label}</div><span class="comp-sub">Did not compete</span></div>
+        <span class="comp-medal">—</span>
+      </div>`;
+    }
+    const cls = awardClass(c.award);
+    const extra = [];
+    if (c.points != null) extra.push(`${c.points} pts`);
+    if (c.rank) extra.push(`Global rank: ${c.rank}`);
+    return `<div class="comp-row">
+      <div>
+        <div class="comp-name">${c.label}</div>
+        ${extra.length ? `<span class="comp-sub">${extra.join(" · ")}</span>` : ""}
+      </div>
+      <span class="medal-pill ${cls}"><span class="dot"></span>${awardShort(c.award)}</span>
+    </div>`;
+  }).join("");
+
+  const m = document.getElementById("modal");
+  m.hidden = false;
+  requestAnimationFrame(() => m.classList.add("open"));
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  const m = document.getElementById("modal");
+  m.classList.remove("open");
+  setTimeout(() => { m.hidden = true; }, 200);
+  document.body.style.overflow = "";
+}
+
+// ============================================================
+// WIRE EVENTS
+// ============================================================
+document.getElementById("search").addEventListener("input", e => {
+  state.search = e.target.value;
+  render();
+});
+document.getElementById("sort").addEventListener("change", e => {
+  state.sort = e.target.value;
+  render();
+});
+document.getElementById("school").addEventListener("change", e => {
+  state.school = e.target.value;
+  render();
+});
+document.querySelectorAll("#comp-seg button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("#comp-seg button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    state.competition = btn.dataset.comp;
+    state.award = null;  // reset award filter on competition switch
+    render();
+  });
+});
+document.getElementById("clear-btn").addEventListener("click", () => {
+  state.search = ""; state.sort = "grade-asc"; state.school = "";
+  state.competition = "all"; state.grade = null; state.award = null;
+  document.getElementById("search").value = "";
+  document.getElementById("sort").value = "grade-asc";
+  document.getElementById("school").value = "";
+  document.querySelectorAll("#comp-seg button").forEach(b => b.classList.remove("active"));
+  document.querySelector('#comp-seg button[data-comp="all"]').classList.add("active");
+  render();
+});
+document.getElementById("modal-close").addEventListener("click", closeModal);
+document.getElementById("modal").addEventListener("click", e => {
+  if (e.target.id === "modal") closeModal();
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeModal();
+});
+
+// ============================================================
+// INIT
+// ============================================================
+renderSchoolDropdown();
+render();
+</script>
+</body>
+</html>
